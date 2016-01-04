@@ -1,6 +1,7 @@
 /**
  * difficulty: medium
  * url: https://leetcode.com/problems/3sum-closest/
+ * tag: arrays, 2 pointers
  * time complexity: O(n^2), space: O(1)
  * */
 public class Solution {
