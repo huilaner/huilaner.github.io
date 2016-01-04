@@ -1,3 +1,8 @@
+/**
+ * difficulty: medium
+ * url: https://leetcode.com/problems/3sum-closest/
+ * time complexity: O(n^2), space: O(1)
+ * */
 public class Solution {
     public int threeSumClosest(int[] nums, int target) {
         if(nums.length == 0) return 0;
