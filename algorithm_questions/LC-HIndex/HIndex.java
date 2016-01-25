@@ -46,3 +46,15 @@ public class Solution {
         return h;
     }
 }
+
+//O(logN)
+public class Solution {
+    public int hIndex(int[] citations) {
+        int n = citations.length;
+        if(n == 0) return 0;
+        Arrays.sort(citations);
+        int i = 0;
+        while(i<n && citations[i]<(n-i)) i++;
+        return n-i;
+    }
+}
