@@ -18,3 +18,20 @@ public class Solution {
         return dp[n-1];
     }
 }
+
+//space O(1) dp
+public class Solution {
+    public int rob(int[] nums) {
+        if(nums.length == 0) return 0;
+        if(nums.length == 1) return nums[0];
+        int n = nums.length;
+        int prevNo = 0, prevYes = 0;
+        for(int i = 0; i < nums.length; i++){
+            int tmp = prevNo;
+            prevNo = Math.max(prevNo, prevYes);
+            prevYes = tmp + nums[i];
+        }
+        return Math.max(prevNo, prevYes);
+    }
+}
+
