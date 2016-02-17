@@ -2,6 +2,7 @@
   * difficulty: medium
   * url: https://leetcode.com/problems/restore-ip-addresses/
   * tag: backtracking, string
+  * other way: https://leetcode.com/discuss/12790/my-code-in-java (iterative method)
 */
 public class Solution {
     public List<String> restoreIpAddresses(String s) {
