@@ -13,7 +13,7 @@ LinkedList
 - 审题要看清楚 from end
 - edge cases: n >= linkedlist size
 
-```
+```java
 /**
  * Definition for ListNode.
  * public class ListNode {
