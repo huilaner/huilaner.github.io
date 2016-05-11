@@ -102,8 +102,13 @@
         function (response) {
           if (response && !response.error) {
             /* handle the result */
-            console.log("response: "+response);
-            document.getElementById('friend_list').innerHTML = "friend list returned: "+response;
+            console.log(response);
+            var data = response.data;
+            var rst = "";
+            for(var i = 0; i < data.length; i++){
+                rst += data[i].id;
+            }
+            document.getElementById('friend_list').innerHTML = "friend list returned: "+rst;
 
           }
         }
