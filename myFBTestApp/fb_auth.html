@@ -17,7 +17,7 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
-      findFriends();
+      findFriends(response.authResponse);
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -82,12 +82,13 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.name + '!' + ' accessToken:' + response.authResponse.accessToken;
     });
   }
 
-  function findFriends(){
+  function findFriends(authResponse){
     /* make the API call */
+    console.log("accessToken:"+authResponse.accessToken);
     FB.api(
         "/{friend-list-id}",
         function (response) {
@@ -116,6 +117,9 @@
 </div>
 
 
+
+<div id="friend_list" style="height: 50px"></div>
+
 <div
   class="fb-like"
   data-share="true"
@@ -123,7 +127,6 @@
   data-show-faces="true">
 </div>
 
-<div id="friend_list"></div>
 
 </body>
 </html>
