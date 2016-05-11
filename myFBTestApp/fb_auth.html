@@ -110,6 +110,13 @@
     );
   }
 
+  function logout(){
+    FB.logout(function(response) {
+      document.getElementById('status').innerHTML = "Bye!";
+      console.log(response);
+    });
+  }
+
 </script>
 
 <!--
@@ -121,12 +128,17 @@
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
+
 <div id="status">
 </div>
 
 
 
 <div id="friend_list" style="height: 50px"></div>
+
+
+<fb:logout-button scope="public_profile,email" onlogin="logout();">
+</fb:logout-button>
 
 <div
   class="fb-like"
