@@ -106,7 +106,8 @@
             var data = response.data;
             var rst = "";
             for(var i = 0; i < data.length; i++){
-                rst += data[i].id;
+                var friend = data[i].id.split(" ")[1];
+                rst += friend +", ";
             }
             document.getElementById('friend_list').innerHTML = "friend list returned: "+rst;
 
