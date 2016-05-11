@@ -89,7 +89,8 @@
 
   function getPermission(){
     FB.login(function(response) {
-      console.log("permission:"+response);
+      console.log("got permission");
+      console.log(response);
     }, {scope: 'read_custom_friendlists', return_scopes: true});
   }
 
