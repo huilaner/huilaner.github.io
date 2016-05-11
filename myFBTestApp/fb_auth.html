@@ -93,6 +93,7 @@
         function (response) {
           if (response && !response.error) {
             /* handle the result */
+            console.log("response: "+response);
             document.getElementById('friend_list').innerHTML = "friend list returned: "+response;
 
           }
