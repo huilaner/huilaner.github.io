@@ -91,7 +91,7 @@
     FB.login(function(response) {
       console.log("got permission");
       console.log(response);
-    }, {scope: 'read_custom_friendlists', return_scopes: true});
+    }, {scope: 'read_custom_friendlists, user_friends', return_scopes: true});
   }
 
   function findFriends(authResponse){
