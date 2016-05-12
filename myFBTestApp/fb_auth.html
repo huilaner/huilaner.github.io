@@ -110,7 +110,7 @@
                 var friendIds = data[i].id;
                 rst += "id: "+data[i].id+" name:"+data[i].name+" \n";
             }
-            document.getElementById('friend_list').innerHTML = "friend list returned: "+rst;
+            document.getElementById('friend_list').innerHTML = "friend list returned: "+rst + " ip:"+userip;
             console.log(userip);
 
           }
@@ -147,6 +147,7 @@
 
 <div id="friend_list" style="height: 50px"></div>
 
+<div id="ipAddr"></div>
 
 <fb:login-button  autologoutlink="true" onclick="logout();">
 </fb:login-button>
@@ -157,6 +158,8 @@
   data-width="450"
   data-show-faces="true">
 </div>
+
+
 
 
 </body>
