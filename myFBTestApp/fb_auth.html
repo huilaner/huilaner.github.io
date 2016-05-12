@@ -17,7 +17,8 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
-      getPermission();
+      findFriends();
+      // getPermission();
       //findFriends(response.authResponse);
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -42,7 +43,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1310409158978603',
+    appId      : '1628201564168063',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
