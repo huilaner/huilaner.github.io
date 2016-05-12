@@ -111,15 +111,13 @@
                 rst += "id: "+data[i].id+" name:"+data[i].name+" \n";
             }
             document.getElementById('friend_list').innerHTML = "friend list returned: "+rst;
+            console.log(userip);
 
           }
         }
     );
   }
 
-    function getip(json){
-      alert(json.ip); // alerts the ip address
-    }
 
   function logout(){
     FB.logout(function(response) {
@@ -130,7 +128,7 @@
 
 </script>
 
-<script type="application/javascript" src="http://www.telize.com/jsonip?callback=getip"></script>
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 
 <!--
   Below we include the Login Button social plugin. This button uses
