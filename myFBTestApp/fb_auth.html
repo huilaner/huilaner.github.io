@@ -98,7 +98,7 @@
   function findFriends(){
     /* make the API call */
     FB.api(
-        "/me/friendlists",
+        "/me/friends",
         function (response) {
           if (response && !response.error) {
             /* handle the result */
@@ -106,8 +106,8 @@
             var data = response.data;
             var rst = "";
             for(var i = 0; i < data.length; i++){
-                var friend = data[i].id.split("_")[1];
-                rst += friend +", ";
+                var friendIds = data[i].id;
+                rst += "id: "+data[i].id+" name:"+data[i].name+" \n";
             }
             document.getElementById('friend_list').innerHTML = "friend list returned: "+rst;
 
