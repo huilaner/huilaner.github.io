@@ -12,6 +12,7 @@ public class Solution {
         if(s == null || t == null) return false;
         int m = s.length();
         int n = t.length();
+        //can be -> if (m > n) return isOneEditDistance(t, s);
         if(m < n){
             String tmp = s;
             s = t;
